@@ -25,8 +25,8 @@ export default {
   		colors: {
   			primary: "#1c1c22",
 			accent: {
-				default: "#00ff99",
-				hover: "#00e187"
+				default: "#FBBE0D",
+				hover: "#E9A700"
 			}
   		},
   		borderRadius: {
@@ -36,5 +36,6 @@ export default {
   		}
   	}
   },
-//   plugins: [require("tailwindcss-animate")],
+	// eslint-disable-next-line @typescript-eslint/no-require-imports
+	plugins: [require("tailwindcss-animate")],
 } satisfies Config;
