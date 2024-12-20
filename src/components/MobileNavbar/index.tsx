@@ -1,32 +1,32 @@
 "use client";
 
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { CiMenuFries } from "react-icons/ci"
+import { CiMenuFries } from "react-icons/ci";
 
 const links = [
-{
-  name: "home",
-  path: "/",
-},
-{
-  name: "services",
-  path: "/services",
-},
-{
-  name: "resume",
-  path: "/resume",
-},
-{
-  name: "work",
-  path: "/work",
-},
-{
-  name: "contact",
-  path: "/contact",
-},
-]
+  {
+    name: "home",
+    path: "/",
+  },
+  {
+    name: "services",
+    path: "/services",
+  },
+  {
+    name: "resume",
+    path: "/resume",
+  },
+  {
+    name: "work",
+    path: "/work",
+  },
+  {
+    name: "contact",
+    path: "/contact",
+  },
+];
 
 const MobileNavbar = () => {
   const pathname = usePathname();
@@ -46,15 +46,22 @@ const MobileNavbar = () => {
         <nav className="flex flex-col justify-center items-center gap-8">
           {links.map((link, index) => {
             return (
-              <Link href={link.path} key={index} className={`${link.path === pathname && "text-accent-default border-b-2 border-accent-default"} text-xl hover:text-accent-hover transition-all`}>
+              <Link
+                href={link.path}
+                key={index}
+                className={`${
+                  link.path === pathname &&
+                  "text-accent-default border-b-2 border-accent-default"
+                } text-xl hover:text-accent-hover transition-all`}
+              >
                 {link.name}
               </Link>
-            )
+            );
           })}
         </nav>
       </SheetContent>
     </Sheet>
-  )
-}
+  );
+};
 
 export default MobileNavbar;

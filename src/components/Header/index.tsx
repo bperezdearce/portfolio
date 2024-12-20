@@ -1,18 +1,17 @@
-import Link from "next/link"
-import Navbar from "../Navbar"
-import { Button } from "../ui/button"
+import Link from "next/link";
+import Navbar from "../Navbar";
+import { Button } from "../ui/button";
 import MobileNavbar from "../MobileNavbar";
 
 export const Header = () => {
   return (
     <header className="py-8 xl:py-12 text-white">
       <div className="container mx-auto flex justify-between items-center">
-
         {/* logo */}
         <Link href="/">
-        <h1 className="text-4xl font-semibold">
-          PDA<span className="text-accent-default">.</span>
-        </h1>
+          <h1 className="text-4xl font-semibold">
+            PDA<span className="text-accent-default">.</span>
+          </h1>
         </Link>
 
         {/* desktop nav & hire me button */}
@@ -27,8 +26,7 @@ export const Header = () => {
         <div className="xl:hidden">
           <MobileNavbar />
         </div>
-
       </div>
     </header>
-  )
+  );
 };
