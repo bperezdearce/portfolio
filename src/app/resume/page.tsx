@@ -41,7 +41,7 @@ const about = {
     },
     {
       fieldName: "Phone",
-      fieldValue: "(+56) 9 8127 2793",
+      fieldValue: "(+569) 8127 2793",
     },
     {
       fieldName: "Email",

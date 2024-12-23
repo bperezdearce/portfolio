@@ -21,7 +21,7 @@ const services = [
   },
   {
     num: "03",
-    title: "UX/UI Design",
+    title: "UI/UX Design",
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis, nemo.",
     href: "UI/UX Design",
