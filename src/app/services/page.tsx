@@ -9,28 +9,28 @@ const services = [
     num: "01",
     title: "Web Application Development",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis, nemo.",
+      "I create responsive and scalable web applications tailored to your business needs, ensuring optimal performance and smooth user experiences.",
     href: "Web Application Development",
   },
   {
     num: "02",
     title: "Mobile Application Development",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis, nemo.",
+      "I design and develop intuitive mobile apps for iOS and Android, focusing on functionality, usability, and engaging interfaces.",
     href: "Mobile Application Development",
   },
   {
     num: "03",
     title: "UI/UX Design",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis, nemo.",
+      "I craft user-centered designs that enhance usability and create visually appealing experiences, aligning with your brand identity.",
     href: "UI/UX Design",
   },
   {
     num: "04",
     title: "Research",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis, nemo.",
+      "I apply scientific methods to social research and market studies, delivering insightful analyses and actionable recommendations.",
     href: "Research",
   },
 ];

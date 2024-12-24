@@ -1,11 +1,23 @@
 "use client";
 
-import { FaHtml5, FaCss3, FaReact, FaNodeJs } from "react-icons/fa";
+import {
+  FaHtml5,
+  FaCss3,
+  FaReact,
+  FaNodeJs,
+  FaBootstrap,
+  FaFigma,
+} from "react-icons/fa";
 import {
   SiTailwindcss,
   SiNextdotjs,
   SiTypescript,
   SiJavascript,
+  SiExpress,
+  SiMongodb,
+  SiPostgresql,
+  SiVercel,
+  SiAdobecreativecloud,
 } from "react-icons/si";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -21,7 +33,7 @@ import {
 const about = {
   title: "About me",
   description:
-    "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad culpa, harum dicta eveniet pariatur laudantium tenetur adipisci.",
+    "Full Stack Developer with a background in sociology and music. Driven by curiosity, creativity and attention to detail, I am currently exploring web development by blending technology with insights from my past careers as I grow in this dynamic field.",
   info: [
     {
       fieldName: "Name",
@@ -55,7 +67,7 @@ const experience = {
   icon: "/assets/resume/badge.svg",
   title: "My experience",
   description:
-    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis corrupti facilis atque saepe! Sequi mollitia beatae facere!",
+    "My professional journey spans research, consultancy, and education, reflecting my commitment to innovation and impactful solutions.",
   items: [
     {
       company: "Henry Bootcamp",
@@ -95,7 +107,7 @@ const education = {
   icon: "/assets/resume/cap.svg",
   title: "My education",
   description:
-    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis corrupti facilis atque saepe! Sequi mollitia beatae facere!",
+    "The bridge between both of my educational experiences allows me to create meaningful digital experiences, combining humanities and technology.",
   items: [
     {
       institution: "Henry Bootcamp",
@@ -110,12 +122,10 @@ const education = {
   ],
 };
 
-//skills data
-const skills = {
-  title: "My skills",
-  description:
-    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis corrupti facilis atque saepe! Sequi mollitia beatae facere!",
-  skillList: [
+//technologies data
+const technologies = {
+  title: "Technology stack",
+  technologyList: [
     {
       icon: <FaHtml5 />,
       name: "html 5",
@@ -134,7 +144,7 @@ const skills = {
     },
     {
       icon: <FaReact />,
-      name: "react.js",
+      name: "react",
     },
     {
       icon: <SiNextdotjs />,
@@ -145,8 +155,36 @@ const skills = {
       name: "tailwind.css",
     },
     {
+      icon: <FaBootstrap />,
+      name: "bootstrap",
+    },
+    {
+      icon: <SiExpress />,
+      name: "express",
+    },
+    {
       icon: <FaNodeJs />,
       name: "node.js",
+    },
+    {
+      icon: <SiMongodb />,
+      name: "mongoDB",
+    },
+    {
+      icon: <SiPostgresql />,
+      name: "postgreSQL",
+    },
+    {
+      icon: <SiVercel />,
+      name: "vercel",
+    },
+    {
+      icon: <FaFigma />,
+      name: "figma",
+    },
+    {
+      icon: <SiAdobecreativecloud />,
+      name: "adobe creative cloud",
     },
   ],
 };
@@ -167,21 +205,45 @@ const Resume = () => {
           className="flex flex-col xl:flex-row gap-[60px]"
         >
           <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
+            <TabsTrigger value="about">About me</TabsTrigger>
             <TabsTrigger value="experience">Experience</TabsTrigger>
             <TabsTrigger value="education">Education</TabsTrigger>
-            <TabsTrigger value="skills">Skills</TabsTrigger>
-            <TabsTrigger value="about">About me</TabsTrigger>
+            <TabsTrigger value="technologies">Technology stack</TabsTrigger>
           </TabsList>
 
           {/* content */}
           <div className="min-h-[70vh] w-full">
+            {/* about */}
+            <TabsContent
+              value="about"
+              className="w-full text-center xl:text-left"
+            >
+              <div className="flex flex-col gap-[30px]">
+                <h3 className="text-4xl font-bold">{about.title}</h3>
+                <p className="max-w-[600px] xl:max-w-[800px] text-white/60 mx-auto xl:mx-0 xl:text-justify">
+                  {about.description}
+                </p>
+                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
+                  {about.info.map((item, index) => {
+                    return (
+                      <li
+                        key={index}
+                        className="flex items-center justify-center xl:justify-start gap-4"
+                      >
+                        <span className="text-white/60 text-sm">
+                          {item.fieldName}
+                        </span>
+                        <span className="text-lg">{item.fieldValue}</span>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            </TabsContent>
             {/* experience */}
             <TabsContent value="experience" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{experience.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
-                  {experience.description}
-                </p>
                 <ScrollArea className="h-[400px]">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {experience.items.map((item, index) => {
@@ -213,9 +275,6 @@ const Resume = () => {
             <TabsContent value="education" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{education.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
-                  {education.description}
-                </p>
                 <ScrollArea className="h-[400px]">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {education.items.map((item, index) => {
@@ -231,7 +290,9 @@ const Resume = () => {
                             {item.degree}
                           </h3>
                           <div className="flex items-center gap-3">
-                            <p className="text-white/60 text-sm">{item.institution}</p>
+                            <p className="text-white/60 text-sm">
+                              {item.institution}
+                            </p>
                           </div>
                         </li>
                       );
@@ -242,58 +303,27 @@ const Resume = () => {
             </TabsContent>
 
             {/* skills */}
-            <TabsContent value="skills" className="w-full">
+            <TabsContent value="technologies" className="w-full">
               <div className="flex flex-col gap-[30px]">
                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                  <h3 className="text-4xl font-bold">{skills.title}</h3>
-                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
-                    {skills.description}
-                  </p>
+                  <h3 className="text-4xl font-bold">{technologies.title}</h3>
                 </div>
                 <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
-                  {skills.skillList.map((skill, index) => {
+                  {technologies.technologyList.map((technology, index) => {
                     return (
                       <li key={index}>
                         <TooltipProvider delayDuration={100}>
                           <Tooltip>
                             <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
                               <div className="text-6xl group-hover:text-accent-hover transition-all duration-300">
-                                {skill.icon}
+                                {technology.icon}
                               </div>
                             </TooltipTrigger>
                             <TooltipContent>
-                              <p className="capitalize">{skill.name}</p>
+                              <p className="capitalize">{technology.name}</p>
                             </TooltipContent>
                           </Tooltip>
                         </TooltipProvider>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </div>
-            </TabsContent>
-
-            {/* about */}
-            <TabsContent
-              value="about"
-              className="w-full text-center xl:text-left"
-            >
-              <div className="flex flex-col gap-[30px]">
-                <h3 className="text-4xl font-bold">{about.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
-                  {about.description}
-                </p>
-                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
-                  {about.info.map((item, index) => {
-                    return (
-                      <li
-                        key={index}
-                        className="flex items-center justify-center xl:justify-start gap-4"
-                      >
-                        <span className="text-white/60 text-sm">
-                          {item.fieldName}
-                        </span>
-                        <span className="text-lg">{item.fieldValue}</span>
                       </li>
                     );
                   })}
