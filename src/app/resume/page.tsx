@@ -18,6 +18,7 @@ import {
   SiPostgresql,
   SiVercel,
   SiAdobecreativecloud,
+  SiVite,
 } from "react-icons/si";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -33,7 +34,7 @@ import {
 const about = {
   title: "About me",
   description:
-    "Full Stack Developer with a background in sociology and music. Driven by curiosity, creativity and attention to detail, I am currently exploring web development by blending technology with insights from my past careers as I grow in this dynamic field.",
+    "Full Stack Developer with a background in sociology and music. I am currently exploring web development by blending technology with insights from my past careers as I grow in this dynamic field.",
   info: [
     {
       fieldName: "Name",
@@ -151,6 +152,10 @@ const technologies = {
       name: "next.js",
     },
     {
+      icon: <SiVite />,
+      name: "vite",
+    },
+    {
       icon: <SiTailwindcss />,
       name: "tailwind.css",
     },
@@ -201,7 +206,7 @@ const Resume = () => {
     >
       <div className="container mx-auto">
         <Tabs
-          defaultValue="experience"
+          defaultValue="about"
           className="flex flex-col xl:flex-row gap-[60px]"
         >
           <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
@@ -308,6 +313,7 @@ const Resume = () => {
                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
                   <h3 className="text-4xl font-bold">{technologies.title}</h3>
                 </div>
+                <ScrollArea className="h-[400px]">
                 <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
                   {technologies.technologyList.map((technology, index) => {
                     return (
@@ -328,6 +334,7 @@ const Resume = () => {
                     );
                   })}
                 </ul>
+                </ScrollArea>
               </div>
             </TabsContent>
           </div>
