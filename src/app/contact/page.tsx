@@ -36,7 +36,7 @@ const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
   emailjs
     .sendForm(
       "service_w1ebj7u", // Reemplaza con tu Service ID
-      "template_puezyua", // Reemplaza con tu Template ID
+      "template_157kqbp", // Reemplaza con tu Template ID
       e.currentTarget,
       "lM3vkokEgk34gMC8t" // Reemplaza con tu Public Key
     )
