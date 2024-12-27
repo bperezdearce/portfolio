@@ -81,9 +81,9 @@ const Contact = () => {
                 <Input type="phone" name="phone" placeholder="Phone number" />
               </div>
               {/* select */}
-              <Select>
+              <Select name="service">
                 <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Select a service" />
+                  <SelectValue placeholder="Select a service"/>
                 </SelectTrigger>
                 <SelectContent>
                   <SelectGroup>
@@ -103,6 +103,7 @@ const Contact = () => {
               <Textarea
                 className="h-[200px]"
                 placeholder="Type your message here"
+                name="message"
               />
               {/* button */}
               <Button size="default" className="max-w-40" type="submit">
