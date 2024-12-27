@@ -36,7 +36,7 @@ const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
   emailjs
     .sendForm(
       "service_w1ebj7u", // Reemplaza con tu Service ID
-      "template_hwn8a58", // Reemplaza con tu Template ID
+      "template_puezyua", // Reemplaza con tu Template ID
       e.currentTarget,
       "lM3vkokEgk34gMC8t" // Reemplaza con tu Public Key
     )
@@ -75,10 +75,10 @@ const Contact = () => {
               </p>
               {/* input */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Input type="firstname" placeholder="Firstname" />
-                <Input type="lastname" placeholder="Lastname" />
-                <Input type="email" placeholder="Email address" />
-                <Input type="phone" placeholder="Phone number" />
+                <Input type="firstname" name="firstname" placeholder="Firstname" />
+                <Input type="lastname" name="lastname" placeholder="Lastname" />
+                <Input type="email" name="email" placeholder="Email address" />
+                <Input type="phone" name="phone" placeholder="Phone number" />
               </div>
               {/* select */}
               <Select>
