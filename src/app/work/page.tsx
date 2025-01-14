@@ -20,33 +20,35 @@ const projects = [
   {
     num: "01",
     category: "frontend",
-    title: "project 1",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt minima laborum.",
-    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
+    title: "Sí, voy",
+    description: "I contributed to implementing dynamic and responsive interfaces and played an active role in designing an inclusive UX/UI for users with disabilities, ensuring compliance with web accessibility standards. Additionally, I managed tasks and deliverables using Git and agile methodologies.",
+    stack: [{ name: "TypeScript" }, { name: "Next.js" }, { name: "Tailwind.css" }, {name: "Figma"}, {name: "Vercel"}],
     image: "",
-    live: "",
-    github: "",
+    alt: "Sí, voy",
+    live: "https://front-eta-teal.vercel.app/",
+    github: "https://github.com/sivoyweb/Front",
   },
   {
     num: "02",
     category: "frontend",
-    title: "project 2",
+    title: "Jobs&Wozniak",
     description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt minima laborum.",
-    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
-    image: "",
+    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "TypeScript" }],
+    image: "/assets/work/jobs-wozniak.png",
+    alt: "Jobs&Wozniak",
     live: "",
-    github: "",
+    github: "https://github.com/bperezdearce/Jobs-Wozniak---E-Commerce",
   },
   {
     num: "03",
     category: "fullstack",
-    title: "project 3",
+    title: "Domenica",
     description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt minima laborum.",
     stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
-    image: "",
+    image: "/assets/work/domenica.png",
+    alt: "Domenica",
     live: "",
     github: "",
   },
@@ -77,8 +79,8 @@ const Work = () => {
               <div className="text-8xl leading-none font-extrabold text-transparent text-outline">
                 {project.num}
               </div>
-              <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent-hover transition-all duration-500 capitalize">
-                {project.category} project
+              <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent-hover transition-all duration-500">
+                {project.title}
               </h2>
               <p className="text-white/60">{project.description}</p>
               <ul className="flex gap-4">
@@ -139,8 +141,8 @@ const Work = () => {
                         <Image
                           src={project.image}
                           fill
-                          className="object-cover"
-                          alt="Imagen del Proyecto"
+                          className="object-scale-down bg-primary"
+                          alt={project.alt}
                         />
                       </div>
                     </div>
