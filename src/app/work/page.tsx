@@ -21,9 +21,9 @@ const projects = [
     num: "01",
     category: "frontend",
     title: "Sí, voy",
-    description: "I contributed to implementing dynamic and responsive interfaces and played an active role in designing an inclusive UX/UI for users with disabilities, ensuring compliance with web accessibility standards. Additionally, I managed tasks and deliverables using Git and agile methodologies.",
+    description: "I contributed to implementing dynamic and responsive interfaces and played an active role in designing an inclusive UX/UI for users with disabilities, following web accessibility standards.",
     stack: [{ name: "TypeScript" }, { name: "Next.js" }, { name: "Tailwind.css" }, {name: "Figma"}, {name: "Vercel"}],
-    image: "",
+    image: "/assets/work/si-voy.png",
     alt: "Sí, voy",
     live: "https://front-eta-teal.vercel.app/",
     github: "https://github.com/sivoyweb/Front",
@@ -33,11 +33,11 @@ const projects = [
     category: "frontend",
     title: "Jobs&Wozniak",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt minima laborum.",
-    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "TypeScript" }],
+      "Fictional Apple product E-Commerce, for which I built the UI and designed the UX for the purchase and login experience. The tasks and deliverables were managed using Git methodologies.",
+    stack: [{ name: "TypeScript" }, { name: "Next.js" }, { name: "Tailwind.css" }, {name: "Figma"}, {name: "Vercel"}],
     image: "/assets/work/jobs-wozniak.png",
     alt: "Jobs&Wozniak",
-    live: "",
+    live: "https://jobs-wozniak-e-commerce.vercel.app/",
     github: "https://github.com/bperezdearce/Jobs-Wozniak---E-Commerce",
   },
   {
@@ -141,7 +141,7 @@ const Work = () => {
                         <Image
                           src={project.image}
                           fill
-                          className="object-scale-down bg-primary"
+                          className="object-scale-down bg-transparent"
                           alt={project.alt}
                         />
                       </div>

@@ -2,7 +2,6 @@
 
 import { BsArrowDownRight } from "react-icons/bs";
 import { motion } from "framer-motion";
-import Link from "next/link";
 
 const services = [
   {
@@ -58,12 +57,7 @@ const Services = () => {
                   <div className="text-5xl font-black text-outline text-transparent group-hover:text-outline-hover transition-all duration-500">
                     {service.num}
                   </div>
-                  <Link
-                    href={service.href}
-                    className="w-[70px] h-[70px] rounded-full bg-white group-hover:bg-accent-default transition-all duration-500 flex justify-center items-center hover:-rotate-45"
-                  >
                     <BsArrowDownRight className="text-primary text-3xl" />
-                  </Link>
                 </div>
 
                 {/* title */}
