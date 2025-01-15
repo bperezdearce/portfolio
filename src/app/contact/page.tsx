@@ -9,6 +9,7 @@ import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import dotenv from "dotenv";
+import { ToastContainer, toast, Slide } from "react-toastify";
 
 import {
   Select,
@@ -44,19 +45,48 @@ const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     emailjs
       .sendForm(serviceId, templateId, e.currentTarget, publicKey)
       .then(() => {
-        alert("Message sent successfully!");
+        toast.success("Message sent successfully!", {
+          position: "bottom-right",
+          autoClose: 1500,
+          hideProgressBar: true,
+          closeOnClick: false,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+          transition: Slide,
+        });
       })
       .catch((error) => {
-        alert("Error sending message: " + error.text);
+        toast.error("Error sending message: " + error.text, {
+          position: "bottom-right",
+          autoClose: 1500,
+          hideProgressBar: true,
+          closeOnClick: false,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+          transition: Slide,
+        });
       });
   } else {
-    alert("Error: Missing email service configuration.");
+    toast.error("Error: Missing email service configuration.", {
+      position: "bottom-right",
+      autoClose: 1500,
+      hideProgressBar: true,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+      transition: Slide,
+    });
   }
 };
 
 const Contact = () => {
   const [selectedService, setSelectedService] = React.useState<string>("");
-
   const handleSelectChange = (value: string) => {
     setSelectedService(value);
   };
@@ -158,6 +188,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </motion.section>
   );
 };
