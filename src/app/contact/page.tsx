@@ -55,7 +55,7 @@ const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 };
 
 const Contact = () => {
-  const [selectedService, setSelectedService] = React.useState<string>('');
+  const [selectedService, setSelectedService] = React.useState<string>("");
 
   const handleSelectChange = (value: string) => {
     setSelectedService(value);
@@ -66,7 +66,7 @@ const Contact = () => {
       initial={{ opacity: 0 }}
       animate={{
         opacity: 1,
-        transition: { delay: 1.5, duration: 0.4, ease: "easeIn" },
+        transition: { delay: 0.4, duration: 0.4, ease: "easeIn" },
       }}
       className="py-6"
     >
@@ -92,21 +92,29 @@ const Contact = () => {
                   name="firstname"
                   placeholder="Firstname"
                 />
-                <Input type="lastname" name="lastname" placeholder="Lastname"/>
-                <Input type="email" name="email" placeholder="Email address"/>
-                <Input type="phone" name="phone" placeholder="Phone number"/>
+                <Input type="lastname" name="lastname" placeholder="Lastname" />
+                <Input type="email" name="email" placeholder="Email address" />
+                <Input type="phone" name="phone" placeholder="Phone number" />
               </div>
               {/* select */}
               <Select onValueChange={handleSelectChange} name="service">
-                <SelectTrigger className={selectedService ? "text-white" : "text-white/60"}>
+                <SelectTrigger
+                  className={selectedService ? "text-white" : "text-white/60"}
+                >
                   <SelectValue placeholder="Select a Service" />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectGroup>
-                    <SelectItem value="web application development" className="text-white/60">
+                    <SelectItem
+                      value="web application development"
+                      className="text-white/60"
+                    >
                       Web Application Development
                     </SelectItem>
-                    <SelectItem value="mobile application development" className="text-white/60">
+                    <SelectItem
+                      value="mobile application development"
+                      className="text-white/60"
+                    >
                       Mobile Application Development
                     </SelectItem>
                     <SelectItem value="UI/UX design" className="text-white/60">
@@ -141,7 +149,7 @@ const Contact = () => {
                     </div>
                     <div className="flex-1">
                       <p className="text-white/60">{item.title}</p>
-                      <h3 className="text-xl">{item.description}</h3>
+                      <h3 className="md:text-xl">{item.description}</h3>
                     </div>
                   </li>
                 );
