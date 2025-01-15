@@ -29,7 +29,7 @@ const Home = () => {
                 className="uppercase flex items-center gap-2"
               >
                 <a
-                  href="/assets/CV_Barbara.pdf"
+                  href="/assets/CV_Barbara_Perez_de_Arce-ENG.pdf"
                   download="CV Bárbara Pérez de Arce - ENG.pdf"
                 >
                   <span>Download CV</span>
