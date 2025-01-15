@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import {
   FaHtml5,
@@ -46,7 +46,7 @@ const about = {
     },
     {
       fieldName: "Experience",
-      fieldValue: "6+ Months",
+      fieldValue: "1 Year",
     },
     {
       fieldName: "Languages",
@@ -200,7 +200,7 @@ const Resume = () => {
       initial={{ opacity: 0 }}
       animate={{
         opacity: 1,
-        transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
+        transition: { delay: 1.5, duration: 0.4, ease: "easeIn" },
       }}
       className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0"
     >

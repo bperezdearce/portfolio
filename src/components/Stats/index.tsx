@@ -12,12 +12,12 @@ const stats = [
     text: "Projects completed",
   },
   {
-    num: 15,
+    num: 16,
     text: "Technologies in my stack",
   },
   {
-    num: 395,
-    text: "Code commits this year",
+    num: 419,
+    text: "Contributions last year",
   },
 ];
 
@@ -25,11 +25,12 @@ const Stats = () => {
   return (
     <section className="pt-4 pb-12 xl:pt-0 xl:pb-0">
       <div className="container mx-auto">
-        <div className="flex flex-wrap gap-6 max-w-[80vw] mx-auto xl:max-w-none">
+        {/* Layout for stats */}
+        <div className="grid grid-cols-2 gap-6 max-w-[80vw] mx-auto sm:flex sm:flex-wrap xl:max-w-none">
           {stats.map((item, index) => {
             return (
               <div
-                className="flex-1 flex gap-4 items-center justify-center xl:justify-start"
+                className="flex flex-col items-center text-center sm:flex-1 sm:flex-row sm:gap-4 sm:justify-center xl:justify-start"
                 key={index}
               >
                 <CountUp
@@ -39,7 +40,7 @@ const Stats = () => {
                   className="text-4xl xl:text-6xl font-extrabold"
                 />
                 <p
-                  className={`${
+                  className={`mt-2 sm:mt-0 ${
                     item.text.length < 15 ? "max-w-[100px]" : "max-w-[150px]"
                   } leading-snug text-white/80`}
                 >

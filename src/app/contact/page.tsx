@@ -1,18 +1,20 @@
 "use client";
 
+import React from "react";
+
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
+import dotenv from "dotenv";
 
 import {
   Select,
   SelectContent,
   SelectGroup,
   SelectItem,
-  SelectLabel,
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
@@ -32,29 +34,39 @@ const info = [
 
 const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
   e.preventDefault();
+  dotenv.config();
 
-  emailjs
-    .sendForm(
-      "service_w1ebj7u", // Reemplaza con tu Service ID
-      "template_157kqbp", // Reemplaza con tu Template ID
-      e.currentTarget,
-      "lM3vkokEgk34gMC8t" // Reemplaza con tu Public Key
-    )
-    .then(() => {
-      alert("Message sent successfully!");
-    })
-    .catch((error) => {
-      alert("Error sending message: " + error.text);
-    });
+  const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+  const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+  const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
+  if (serviceId && templateId && publicKey) {
+    emailjs
+      .sendForm(serviceId, templateId, e.currentTarget, publicKey)
+      .then(() => {
+        alert("Message sent successfully!");
+      })
+      .catch((error) => {
+        alert("Error sending message: " + error.text);
+      });
+  } else {
+    alert("Error: Missing email service configuration.");
+  }
 };
 
 const Contact = () => {
+  const [selectedService, setSelectedService] = React.useState<string>('');
+
+  const handleSelectChange = (value: string) => {
+    setSelectedService(value);
+  };
+
   return (
     <motion.section
       initial={{ opacity: 0 }}
       animate={{
         opacity: 1,
-        transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
+        transition: { delay: 1.5, duration: 0.4, ease: "easeIn" },
       }}
       className="py-6"
     >
@@ -75,27 +87,34 @@ const Contact = () => {
               </p>
               {/* input */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Input type="firstname" name="firstname" placeholder="Firstname" />
-                <Input type="lastname" name="lastname" placeholder="Lastname" />
-                <Input type="email" name="email" placeholder="Email address" />
-                <Input type="phone" name="phone" placeholder="Phone number" />
+                <Input
+                  type="firstname"
+                  name="firstname"
+                  placeholder="Firstname"
+                />
+                <Input type="lastname" name="lastname" placeholder="Lastname"/>
+                <Input type="email" name="email" placeholder="Email address"/>
+                <Input type="phone" name="phone" placeholder="Phone number"/>
               </div>
               {/* select */}
-              <Select name="service">
-                <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Select a service"/>
+              <Select onValueChange={handleSelectChange} name="service">
+                <SelectTrigger className={selectedService ? "text-white" : "text-white/60"}>
+                  <SelectValue placeholder="Select a Service" />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectGroup>
-                    <SelectLabel>Select a Service</SelectLabel>
-                    <SelectItem value="web application development">
+                    <SelectItem value="web application development" className="text-white/60">
                       Web Application Development
                     </SelectItem>
-                    <SelectItem value="mobile application development">
+                    <SelectItem value="mobile application development" className="text-white/60">
                       Mobile Application Development
                     </SelectItem>
-                    <SelectItem value="UI/UX design">UI/UX Design</SelectItem>
-                    <SelectItem value="research">Research</SelectItem>
+                    <SelectItem value="UI/UX design" className="text-white/60">
+                      UI/UX Design
+                    </SelectItem>
+                    <SelectItem value="research" className="text-white/60">
+                      Research
+                    </SelectItem>
                   </SelectGroup>
                 </SelectContent>
               </Select>

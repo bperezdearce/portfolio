@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import { motion } from "framer-motion";
 import React, { useState } from "react";
@@ -21,8 +21,15 @@ const projects = [
     num: "01",
     category: "frontend",
     title: "Sí, voy",
-    description: "I contributed to implementing dynamic and responsive interfaces and played an active role in designing an inclusive UX/UI for users with disabilities, following web accessibility standards.",
-    stack: [{ name: "TypeScript" }, { name: "Next.js" }, { name: "Tailwind.css" }, {name: "Figma"}, {name: "Vercel"}],
+    description:
+      "I contributed to implementing dynamic and responsive interfaces and played an active role in designing an inclusive UX/UI for users with disabilities, following web accessibility standards.",
+    stack: [
+      { name: "TypeScript" },
+      { name: "Next.js" },
+      { name: "Tailwind.css" },
+      { name: "Figma" },
+      { name: "Vercel" },
+    ],
     image: "/assets/work/si-voy.png",
     alt: "Sí, voy",
     live: "https://front-eta-teal.vercel.app/",
@@ -34,7 +41,13 @@ const projects = [
     title: "Jobs&Wozniak",
     description:
       "Fictional Apple product E-Commerce, for which I built the UI and designed the UX for the purchase and login experience. The tasks and deliverables were managed using Git methodologies.",
-    stack: [{ name: "TypeScript" }, { name: "Next.js" }, { name: "Tailwind.css" }, {name: "Figma"}, {name: "Vercel"}],
+    stack: [
+      { name: "TypeScript" },
+      { name: "Next.js" },
+      { name: "Tailwind.css" },
+      { name: "Figma" },
+      { name: "Vercel" },
+    ],
     image: "/assets/work/jobs-wozniak.png",
     alt: "Jobs&Wozniak",
     live: "https://jobs-wozniak-e-commerce.vercel.app/",
@@ -45,12 +58,23 @@ const projects = [
     category: "fullstack",
     title: "Domenica",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt minima laborum.",
-    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
+      "Full Stack Development of an App that functions as a reservation manager for customers of a fictional restaurant called Domenica. The tasks and deliverables were managed using Git methodologies.",
+    stack: [
+      { name: "Html 5" },
+      { name: "Css 3" },
+      { name: "Javascript" },
+      { name: "TypeScript" },
+      { name: "React" },
+      { name: "Vite" },
+      { name: "Express" },
+      { name: "Node.js" },
+      { name: "PostgreSQL" },
+      { name: "Vercel" },
+    ],
     image: "/assets/work/domenica.png",
     alt: "Domenica",
-    live: "",
-    github: "",
+    live: "https://domenica-git-main-bperezdearces-projects.vercel.app/",
+    github: "https://github.com/bperezdearce/domenica",
   },
 ];
 
@@ -68,7 +92,7 @@ const Work = () => {
       initial={{ opacity: 0 }}
       animate={{
         opacity: 1,
-        transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
+        transition: { delay: 1.5, duration: 0.4, ease: "easeIn" },
       }}
       className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0"
     >
@@ -83,16 +107,18 @@ const Work = () => {
                 {project.title}
               </h2>
               <p className="text-white/60">{project.description}</p>
-              <ul className="flex gap-4">
-                {project.stack.map((item, index) => {
-                  return (
-                    <li key={index} className="text-xl text-accent-default">
-                      {item.name}
-                      {index !== project.stack.length - 1 && ","}
-                    </li>
-                  );
-                })}
+              <ul className="flex flex-wrap gap-2">
+                {project.stack.map((item, index) => (
+                  <li
+                    key={index}
+                    className="text-xl text-accent-default"
+                  >
+                    {item.name}
+                    {index !== project.stack.length - 1 && ","}
+                  </li>
+                ))}
               </ul>
+
               <div className="border border-white/20"></div>
               {/* buttons */}
               <div className="flex items-center gap-4">
@@ -135,13 +161,13 @@ const Work = () => {
               {projects.map((project, index) => {
                 return (
                   <SwiperSlide key={index} className="w-full">
-                    <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
-                      <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
+                    <div className="h-[460px] relative group flex justify-center items-center bg-transparent">
+                      <div className="absolute top-0 bottom-0 w-full h-full z-10"></div>
                       <div className="relative w-full h-full">
                         <Image
                           src={project.image}
                           fill
-                          className="object-scale-down bg-transparent"
+                          className="object-scale-down"
                           alt={project.alt}
                         />
                       </div>
@@ -163,3 +189,4 @@ const Work = () => {
 };
 
 export default Work;
+
