@@ -34,7 +34,7 @@ import {
 const about = {
   title: "About me",
   description:
-    "Full Stack Developer with a background in sociology and music. I am currently exploring web development by blending technology with insights from my past careers as I grow in this dynamic field.",
+    "Full Stack Developer and Sociologist. I am committed to combining technology with sociological insights as I advance in web development, pursuing this path with purpose and determination.",
   info: [
     {
       fieldName: "Name",

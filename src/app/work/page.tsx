@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { motion } from "framer-motion";
 import React, { useState } from "react";
@@ -22,7 +22,7 @@ const projects = [
     category: "frontend",
     title: "Sí, voy",
     description:
-      "I contributed to implementing dynamic and responsive interfaces and played an active role in designing an inclusive UX/UI for users with disabilities, following web accessibility standards.",
+      "Real project in which I contributed to implementing dynamic and responsive interfaces, playing an active role in designing and coding an inclusive UX/UI for users with disabilities, following web accessibility standards.",
     stack: [
       { name: "TypeScript" },
       { name: "Next.js" },
@@ -40,7 +40,7 @@ const projects = [
     category: "frontend",
     title: "Jobs&Wozniak",
     description:
-      "Fictional Apple product E-Commerce, for which I built the UI and designed the UX for the purchase and login experience. The tasks and deliverables were managed using Git methodologies.",
+      "A fictional Apple product e-commerce site where users can add and remove products from the cart, proceed to checkout, log in and out of their accounts, and view their user information and purchase history.",
     stack: [
       { name: "TypeScript" },
       { name: "Next.js" },
@@ -58,13 +58,14 @@ const projects = [
     category: "fullstack",
     title: "Domenica",
     description:
-      "Full Stack Development of an App that functions as a reservation manager for customers of a fictional restaurant called Domenica. The tasks and deliverables were managed using Git methodologies.",
+      "Development of an app that functions as a reservation manager for customers of a fictional restaurant called Domenica. The users can make and delete reservations, and the app will update the database accordingly.",
     stack: [
       { name: "Html 5" },
       { name: "Css 3" },
       { name: "Javascript" },
       { name: "TypeScript" },
       { name: "React" },
+      { name: "Redux" },
       { name: "Vite" },
       { name: "Express" },
       { name: "Node.js" },
@@ -75,6 +76,27 @@ const projects = [
     alt: "Domenica",
     live: "https://domenica-git-main-bperezdearces-projects.vercel.app/",
     github: "https://github.com/bperezdearce/domenica",
+  },
+  {
+    num: "04",
+    category: "fullstack",
+    title: "LatinoMedia",
+    description:
+      "Development of an app that works as a catalog for Latin American movies. Users of the app can add movies through a form, and the app will add them to the database and display the movies on the main page.",
+    stack: [
+      { name: "Html 5" },
+      { name: "Css 3" },
+      { name: "Javascript" },
+      { name: "Bootstrap" },
+      { name: "Express" },
+      { name: "Node.js" },
+      { name: "MongoDB" },
+      { name: "Mongoose" },
+    ],
+    image: "/assets/work/latinomedia.png",
+    alt: "LatinoMedia",
+    live: "",
+    github: "https://github.com/bperezdearce/latinomedia",
   },
 ];
 
@@ -109,10 +131,7 @@ const Work = () => {
               <p className="text-white/60">{project.description}</p>
               <ul className="flex flex-wrap gap-2">
                 {project.stack.map((item, index) => (
-                  <li
-                    key={index}
-                    className="text-xl text-accent-default"
-                  >
+                  <li key={index} className="text-accent-default">
                     {item.name}
                     {index !== project.stack.length - 1 && ","}
                   </li>
@@ -189,4 +208,3 @@ const Work = () => {
 };
 
 export default Work;
-
