@@ -7,6 +7,7 @@ import {
   FaNodeJs,
   FaBootstrap,
   FaFigma,
+  FaPython
 } from "react-icons/fa";
 import {
   SiTailwindcss,
@@ -19,6 +20,11 @@ import {
   SiVercel,
   SiAdobecreativecloud,
   SiVite,
+  SiRedux,
+  SiMongoose,
+  SiRender,
+  SiJasmine,
+  SiJest
 } from "react-icons/si";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -144,8 +150,16 @@ const technologies = {
       name: "typescript",
     },
     {
+      icon: <FaPython />,
+      name: "python",
+    },
+    {
       icon: <FaReact />,
       name: "react",
+    },
+    {
+      icon: <SiRedux />,
+      name: "redux",
     },
     {
       icon: <SiNextdotjs />,
@@ -172,6 +186,10 @@ const technologies = {
       name: "node.js",
     },
     {
+      icon: <SiMongoose />,
+      name: "mongoose",
+    },
+    {
       icon: <SiMongodb />,
       name: "mongoDB",
     },
@@ -182,6 +200,18 @@ const technologies = {
     {
       icon: <SiVercel />,
       name: "vercel",
+    },
+    {
+      icon: <SiRender />,
+      name: "render",
+    },
+    {
+      icon: <SiJasmine />,
+      name: "jasmine",
+    },
+    {
+      icon: <SiJest />,
+      name: "jest",
     },
     {
       icon: <FaFigma />,

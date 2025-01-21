@@ -22,7 +22,7 @@ const projects = [
     category: "frontend",
     title: "Sí, voy",
     description:
-      "Real project in which I contributed to implementing dynamic and responsive interfaces, playing an active role in designing and coding an inclusive UX/UI for users with disabilities, following web accessibility standards.",
+      "Real project in which I contributed to the implementation of dynamic and responsive interfaces, actively participating in the design and coding of an inclusive UX/UI for users with diverse disabilities.",
     stack: [
       { name: "TypeScript" },
       { name: "Next.js" },
@@ -125,21 +125,10 @@ const Work = () => {
               <div className="text-8xl leading-none font-extrabold text-transparent text-outline">
                 {project.num}
               </div>
+              <div className="flex gap-10 items-center">
               <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent-hover transition-all duration-500">
                 {project.title}
               </h2>
-              <p className="text-white/60">{project.description}</p>
-              <ul className="flex flex-wrap gap-2">
-                {project.stack.map((item, index) => (
-                  <li key={index} className="text-accent-default">
-                    {item.name}
-                    {index !== project.stack.length - 1 && ","}
-                  </li>
-                ))}
-              </ul>
-
-              <div className="border border-white/20"></div>
-              {/* buttons */}
               <div className="flex items-center gap-4">
                 {/* live project button */}
                 {/* <Link href={project.live}>
@@ -168,6 +157,19 @@ const Work = () => {
                   </TooltipProvider>
                 </Link>
               </div>
+              </div>
+              <p className="text-white/60">{project.description}</p>
+              <ul className="flex flex-wrap gap-2">
+                {project.stack.map((item, index) => (
+                  <li key={index} className="text-accent-default">
+                    {item.name}
+                    {index !== project.stack.length - 1 && ","}
+                  </li>
+                ))}
+              </ul>
+
+              {/* <div className="border border-white/20"></div> */}
+              {/* buttons */}
             </div>
           </div>
           <div className="w-full xl:w-[50%]">

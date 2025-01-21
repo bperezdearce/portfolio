@@ -153,6 +153,9 @@ const Contact = () => {
                     <SelectItem value="research" className="text-white/60">
                       Research
                     </SelectItem>
+                    <SelectItem value="other" className="text-white/60">
+                      Other
+                    </SelectItem>
                   </SelectGroup>
                 </SelectContent>
               </Select>
