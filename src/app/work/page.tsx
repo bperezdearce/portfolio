@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Swiper as SwiperType } from "swiper";
 import "swiper/css";
-import { BsGithub, BsYoutube, BsArrowUpRight } from "react-icons/bs";
+import { BsGithub, BsYoutube } from "react-icons/bs";
 import Link from "next/link";
 import Image from "next/image";
 import WorkSliderBtns from "@/components/WorkSliderBtns";
