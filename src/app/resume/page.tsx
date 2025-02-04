@@ -25,7 +25,8 @@ import {
   SiJasmine,
   SiJest,
   SiDjango,
-  SiNgrok
+  SiNgrok,
+  SiSwagger
 } from "react-icons/si";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -189,6 +190,10 @@ const technologies = {
     {
       icon: <SiDjango />,
       name: "django",
+    },
+    {
+      icon: <SiSwagger />,
+      name: "swagger ui",
     },
     {
       icon: <SiMongoose />,

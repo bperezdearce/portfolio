@@ -10,7 +10,7 @@ interface StatsProps {
 const Stats = ({totalCommits}: StatsProps) => {
   const stats = [
     {
-      num: 0.6,
+      num: 1,
       text: "Year of experience",
     },
     {
@@ -18,7 +18,7 @@ const Stats = ({totalCommits}: StatsProps) => {
       text: "Projects completed",
     },
     {
-      num: 23,
+      num: 24,
       text: "Technologies in my stack",
     },
     {
