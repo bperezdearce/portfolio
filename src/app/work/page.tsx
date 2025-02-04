@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Swiper as SwiperType } from "swiper";
 import "swiper/css";
-import { BsGithub } from "react-icons/bs";
+import { BsGithub, BsYoutube, BsArrowUpRight } from "react-icons/bs";
 import Link from "next/link";
 import Image from "next/image";
 import WorkSliderBtns from "@/components/WorkSliderBtns";
@@ -32,7 +32,7 @@ const projects = [
     ],
     image: "/assets/work/si-voy.png",
     alt: "Sí, voy",
-    live: "https://front-eta-teal.vercel.app/",
+    demo: "https://www.youtube.com/watch?v=73N9lGJr55I",
     github: "https://github.com/sivoyweb/Front",
   },
   {
@@ -126,37 +126,54 @@ const Work = () => {
                 {project.num}
               </div>
               <div className="flex gap-10 items-center">
-              <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent-hover transition-all duration-500">
-                {project.title}
-              </h2>
-              <div className="flex items-center gap-4">
-                {/* live project button */}
-                {/* <Link href={project.live}>
-                  <TooltipProvider delayDuration={100}>
-                    <Tooltip>
-                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                        <BsArrowUpRight className="text-white text-3xl group-hover:text-accent-hover" />
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p>Live project</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                </Link> */}
-                {/* github repository button */}
-                <Link href={project.github}>
-                  <TooltipProvider delayDuration={100}>
-                    <Tooltip>
-                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                        <BsGithub className="text-white text-3xl group-hover:text-accent-hover" />
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p>Github repository</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                </Link>
-              </div>
+                <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent-hover transition-all duration-500">
+                  {project.title}
+                </h2>
+                <div className="flex items-center gap-4">
+                  {/* github repository button */}
+                  <Link href={project.github}>
+                    <TooltipProvider delayDuration={100}>
+                      <Tooltip>
+                        <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
+                          <BsGithub className="text-white text-3xl group-hover:text-accent-hover" />
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p>Github repository</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
+                  </Link>
+                  {/* live project button */}
+                  {/* {project.live && (
+                    <Link href={project.live}>
+                      <TooltipProvider delayDuration={100}>
+                        <Tooltip>
+                          <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
+                            <BsArrowUpRight className="text-white text-3xl group-hover:text-accent-hover" />
+                          </TooltipTrigger>
+                          <TooltipContent>
+                            <p>Live project</p>
+                          </TooltipContent>
+                        </Tooltip>
+                      </TooltipProvider>
+                    </Link>
+                  )} */}
+                  {/* youtube demo button */}
+                  {project.demo && (
+                    <Link href={project.demo}>
+                      <TooltipProvider delayDuration={100}>
+                        <Tooltip>
+                          <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
+                            <BsYoutube className="text-white text-3xl group-hover:text-accent-hover" />
+                          </TooltipTrigger>
+                          <TooltipContent>
+                            <p>Demo</p>
+                          </TooltipContent>
+                        </Tooltip>
+                      </TooltipProvider>
+                    </Link>
+                  )}
+                </div>
               </div>
               <p className="text-white/60">{project.description}</p>
               <ul className="flex flex-wrap gap-2">

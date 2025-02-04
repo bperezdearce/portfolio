@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Navbar from "../Navbar";
-import { Button } from "../ui/button";
 import MobileNavbar from "../MobileNavbar";
 
 export const Header = () => {
@@ -17,9 +16,6 @@ export const Header = () => {
         {/* desktop nav & hire me button */}
         <div className="hidden xl:flex items-center gap-8">
           <Navbar />
-          <Link href="/contact">
-            <Button>hire me</Button>
-          </Link>
         </div>
 
         {/* mobile nav */}

@@ -7,6 +7,7 @@ import {
   FaNodeJs,
   FaBootstrap,
   FaFigma,
+  FaDocker,
   FaPython
 } from "react-icons/fa";
 import {
@@ -18,13 +19,13 @@ import {
   SiMongodb,
   SiPostgresql,
   SiVercel,
-  SiAdobecreativecloud,
   SiVite,
   SiRedux,
   SiMongoose,
-  SiRender,
   SiJasmine,
-  SiJest
+  SiJest,
+  SiDjango,
+  SiNgrok
 } from "react-icons/si";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -186,6 +187,10 @@ const technologies = {
       name: "node.js",
     },
     {
+      icon: <SiDjango />,
+      name: "django",
+    },
+    {
       icon: <SiMongoose />,
       name: "mongoose",
     },
@@ -202,8 +207,12 @@ const technologies = {
       name: "vercel",
     },
     {
-      icon: <SiRender />,
-      name: "render",
+      icon: <FaDocker />,
+      name: "docker",
+    },
+    {
+      icon: <SiNgrok />,
+      name: "ngrok",
     },
     {
       icon: <SiJasmine />,
@@ -216,10 +225,6 @@ const technologies = {
     {
       icon: <FaFigma />,
       name: "figma",
-    },
-    {
-      icon: <SiAdobecreativecloud />,
-      name: "adobe creative cloud",
     },
   ],
 };
