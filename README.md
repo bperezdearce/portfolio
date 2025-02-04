@@ -38,4 +38,5 @@ This portfolio is deployed on [Vercel](https://vercel.com/). If you’d like to 
 2. After pushing your code to GitHub, Vercel will automatically detect the Next.js application and deploy it.
 3. Further configuration (like environment variables) can be done in your Vercel project settings.
 
-## Screenshots
+## Navigation Demo
+![alt text](public/assets/myportfolio.gif)
