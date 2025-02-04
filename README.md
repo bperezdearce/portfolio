@@ -10,20 +10,8 @@ This repository hosts my personal portfolio, showcasing my **resume**, **project
 - **Framer Motion**
 
 ### Prerequisites
-- **Node.js**: Version 14 or higher is recommended. You can check your current version by running:
+- **Node.js**: Version 18.18 or higher is recommended. You can check your current version by running:
 	`node -v`
-
-- **npm**.
-
-### Installation
-1. **Clone** the repository:
-    `git clone https://github.com/your-username/your-portfolio.git`
-
-2. **Navigate** into the project directory:
-    `cd your-portfolio`
-
-3. **Install** dependencies:
-    `npm install`
 
 ## Features
 - **Interactive UI** built with [Tailwind CSS](https://tailwindcss.com/) for quick styling.
