@@ -51,7 +51,7 @@ const projects = [
     image: "/assets/work/jobs-wozniak.png",
     alt: "Jobs&Wozniak",
     live: "https://jobs-wozniak-e-commerce.vercel.app/",
-    github: "https://github.com/bperezdearce/Jobs-Wozniak---E-Commerce",
+    github: "https://github.com/bperezdearce/jobs_wozniak_ecommerce",
   },
   {
     num: "03",
