@@ -1,6 +1,6 @@
 # Personal Portfolio
 
-This repository hosts my personal portfolio, showcasing my **resume**, **projects**, and **contact** information. The UI/UX was initially built following a [tutorial by Cristian Mihai](https://www.youtube.com/watch?v=dImgZ_AH7uA), which I complemented with TypeScript, functionality and my own personal style.
+This repository hosts my personal portfolio, showcasing my **resume**, **projects**, and **contact** information. The UI/UX was initially built following a [tutorial by Cristian Mihai](https://www.youtube.com/watch?v=dImgZ_AH7uA), which I complemented adding TypeScript, functionality and my own personal style.
 
 ## Tech Stack
 - **Next.js**
