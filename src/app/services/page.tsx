@@ -8,7 +8,7 @@ const services = [
     num: "01",
     title: "Web Application Development",
     description:
-      "I create responsive and scalable web applications tailored to your business needs, ensuring optimal performance and smooth user experiences.",
+      "I create responsive and scalable web applications tailored to your needs, ensuring optimal performance and smooth user experiences.",
     href: "Web Application Development",
   },
   {

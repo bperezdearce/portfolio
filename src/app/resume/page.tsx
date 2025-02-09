@@ -62,7 +62,7 @@ const about = {
     },
     {
       fieldName: "Phone",
-      fieldValue: "(+569) 8127 2793",
+      fieldValue: "(+56) 981 272 793",
     },
     {
       fieldName: "Email",
@@ -78,6 +78,11 @@ const experience = {
   description:
     "My professional journey spans research, consultancy, and education, reflecting my commitment to innovation and impactful solutions.",
   items: [
+    {
+      company: "Sí, Voy",
+      position: "Frontend Developer",
+      duration: "Sept 2024 - Oct 2024",
+    },
     {
       company: "Henry Bootcamp",
       position: "Teaching Assistant",
@@ -98,16 +103,6 @@ const experience = {
       position: "Research Analyst",
       duration: "Aug 2019 - Jan 2021",
     },
-    {
-      company: "Fauna Prod",
-      position: "Attaché",
-      duration: "Nov 2014 - Nov 2017",
-    },
-    {
-      company: "Conecta Media",
-      position: "Adjunct Consultant",
-      duration: "Jul 2017 - Oct 2017",
-    },
   ],
 };
 
@@ -119,14 +114,19 @@ const education = {
     "The bridge between both of my educational experiences allows me to create meaningful digital experiences, combining humanities and technology.",
   items: [
     {
+      institution: "Meta",
+      degree: "React Native Certificate",
+      graduation: "2025",
+    },
+    {
       institution: "Henry Bootcamp",
       degree: "Full Stack Development",
-      duration: "Jun 2024 - Oct 2024",
+      graduation: "2024",
     },
     {
       institution: "Universidad de Chile",
       degree: "Sociology",
-      duration: "Mar 2010 - Dic 2014",
+      graduation: "2019",
     },
   ],
 };
@@ -194,6 +194,10 @@ const technologies = {
     {
       icon: <SiSwagger />,
       name: "swagger ui",
+    },
+    {
+      icon: <FaReact />,
+      name: "react native",
     },
     {
       icon: <SiMongoose />,
@@ -329,7 +333,7 @@ const Resume = () => {
                           className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                         >
                           <span className="text-accent-default">
-                            {item.duration}
+                            {item.graduation}
                           </span>
                           <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
                             {item.degree}
