@@ -116,13 +116,14 @@ const Contact = () => {
                 together.
               </p>
               {/* input */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 gap-6">
                 <Input
-                  type="firstname"
-                  name="firstname"
-                  placeholder="Firstname"
+                  type="fullname"
+                  name="fullname"
+                  placeholder="Full Name"
                 />
-                <Input type="lastname" name="lastname" placeholder="Lastname" />
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Input type="email" name="email" placeholder="Email address" />
                 <Input type="phone" name="phone" placeholder="Phone number" />
               </div>
