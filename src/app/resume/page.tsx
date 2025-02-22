@@ -74,7 +74,7 @@ const about = {
 //experience data
 const experience = {
   icon: "/assets/resume/badge.svg",
-  title: "My experience",
+  title: "My latest experience",
   description:
     "My professional journey spans research, consultancy, and education, reflecting my commitment to innovation and impactful solutions.",
   items: [
@@ -126,7 +126,7 @@ const education = {
     {
       institution: "Universidad de Chile",
       degree: "Sociology",
-      graduation: "2019",
+      graduation: "2010 - 2014",
     },
   ],
 };
