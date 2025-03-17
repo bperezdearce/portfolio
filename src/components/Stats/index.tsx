@@ -18,7 +18,7 @@ const Stats = ({totalCommits}: StatsProps) => {
       text: "Projects completed",
     },
     {
-      num: 25,
+      num: 28,
       text: "Technologies in my stack",
     },
     {

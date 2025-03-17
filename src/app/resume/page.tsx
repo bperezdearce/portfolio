@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import {
   FaHtml5,
@@ -7,11 +7,13 @@ import {
   FaNodeJs,
   FaBootstrap,
   FaFigma,
+  FaVuejs,
   FaDocker,
-  FaPython
+  FaPython,
 } from "react-icons/fa";
 import {
   SiTailwindcss,
+  SiAstro,
   SiNextdotjs,
   SiTypescript,
   SiJavascript,
@@ -26,8 +28,9 @@ import {
   SiJest,
   SiDjango,
   SiNgrok,
-  SiSwagger
+  SiSwagger,
 } from "react-icons/si";
+import { GrMysql } from "react-icons/gr";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { motion } from "framer-motion";
@@ -42,7 +45,7 @@ import {
 const about = {
   title: "About me",
   description:
-    "Full Stack Developer and Sociologist. I am committed to combining technology with sociological insights as I advance in web development, pursuing this path with purpose and determination.",
+    "Full Stack Developer and BSc. Sociology. I am committed to combining technology with sociological insights as I advance in web development, pursuing this path with purpose and determination.",
   info: [
     {
       fieldName: "Name",
@@ -168,6 +171,14 @@ const technologies = {
       name: "next.js",
     },
     {
+      icon: <FaVuejs />,
+      name: "vue.js",
+    },
+    {
+      icon: <SiAstro />,
+      name: "astro",
+    },
+    {
       icon: <SiVite />,
       name: "vite",
     },
@@ -210,6 +221,10 @@ const technologies = {
     {
       icon: <SiPostgresql />,
       name: "postgreSQL",
+    },
+    {
+      icon: <GrMysql />,
+      name: "mySQL",
     },
     {
       icon: <SiVercel />,
@@ -358,26 +373,26 @@ const Resume = () => {
                   <h3 className="text-4xl font-bold">{technologies.title}</h3>
                 </div>
                 <ScrollArea className="h-[400px]">
-                <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
-                  {technologies.technologyList.map((technology, index) => {
-                    return (
-                      <li key={index}>
-                        <TooltipProvider delayDuration={100}>
-                          <Tooltip>
-                            <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
-                              <div className="text-6xl group-hover:text-accent-hover transition-all duration-300">
-                                {technology.icon}
-                              </div>
-                            </TooltipTrigger>
-                            <TooltipContent>
-                              <p className="capitalize">{technology.name}</p>
-                            </TooltipContent>
-                          </Tooltip>
-                        </TooltipProvider>
-                      </li>
-                    );
-                  })}
-                </ul>
+                  <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
+                    {technologies.technologyList.map((technology, index) => {
+                      return (
+                        <li key={index}>
+                          <TooltipProvider delayDuration={100}>
+                            <Tooltip>
+                              <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
+                                <div className="text-6xl group-hover:text-accent-hover transition-all duration-300">
+                                  {technology.icon}
+                                </div>
+                              </TooltipTrigger>
+                              <TooltipContent>
+                                <p className="capitalize">{technology.name}</p>
+                              </TooltipContent>
+                            </Tooltip>
+                          </TooltipProvider>
+                        </li>
+                      );
+                    })}
+                  </ul>
                 </ScrollArea>
               </div>
             </TabsContent>
